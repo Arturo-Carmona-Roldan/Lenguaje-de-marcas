@@ -1,0 +1,34 @@
+{
+    "matricula":{
+        "personal":{
+            "documento":"99223366M",
+            "nombre":"Juan Padro Martín",
+            "titulacion":"Ingeniería Informática",
+            "curso_academico":"1997/1998",
+            "domicilios":[
+                {
+                    "domicilio":{
+                        "nombre":"C/ Pincipal no1"
+                    }
+                },
+                {
+                    "domicilio":{
+                        "nombre":"C/ Secundaria no2"
+                    }
+                }
+            ]
+        },
+        "pagos":[
+            {
+                "pago":{
+                    "tipo_matricula":"Pago fraccionado 1"
+                }
+            },
+            {
+                "pago":{
+                    "tipo_matricula":"Pago fraccionado 2"
+                }
+            }
+        ]
+    }
+}
