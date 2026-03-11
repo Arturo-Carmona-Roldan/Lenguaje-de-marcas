@@ -1,7 +1,10 @@
 [
     {
-        "modeloo":"Dell XPS 15",
-        "precio":1800,
+        "modelo":"Dell XPS 15",
+        "precio":{
+            "valor":1800,
+            "moneda":"$"
+        },
         "procesador":"Intel Core i7-12700H",
         "Componentes":[
             "16GB RAM",
@@ -11,7 +14,10 @@
     },
     {
         "modelo":"MacBook Pro 14",
-        "precio":2000,
+        "precio":{
+            "valor":2000,
+            "moneda":"$"
+        },
         "procesador":"Apple M2 Pro",
         "Componentes":[
             "16GB RAM",
@@ -21,7 +27,10 @@
     },
     {
         "modelo":"ASUS ROG STRIX G15",
-        "precio":1600,
+        "precio":{
+            "valor":1600,
+            "moneda":"$"
+        },
         "procesador":"AMD Ryzen 6900HX",
         "Componentes":[
             "32GB RAM",
@@ -31,7 +40,10 @@
     },
     {
         "modelo":"HP Pavilion 15",
-        "precio":900,
+        "precio":{
+            "valor":900,
+            "moneda":"$"
+        },
         "procesador":"Intel Core i5-1240P",
         "Componentes":[
             "8GB RAM",
