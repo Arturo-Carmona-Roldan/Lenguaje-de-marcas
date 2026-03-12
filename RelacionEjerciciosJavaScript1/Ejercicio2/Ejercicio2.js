@@ -11,5 +11,4 @@ function añadir() {
     li.appendChild(t);
 
     ul.appendChild(li);
-
 }

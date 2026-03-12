@@ -1,6 +1,6 @@
-function resaltar() {
+const par3 = document.querySelector("#par3");
+const boton = document.querySelector("#boton");
 
-    let p = document.querySelector("p:nth-of-type(3)");
-    p.style.backgroundColor = "yellow";
-
-}
+boton.addEventListener("click", function (){
+    par3.style.background= "yellow"
+})
