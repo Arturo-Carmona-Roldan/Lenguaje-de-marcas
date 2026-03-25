@@ -7,7 +7,17 @@ async function CargarJSON() {
     const response = await fetch(URL);
     const juegos = await response.json();
 
-    juegos.array.forEach((juego) => {
+    datos(juegos);
+   
+  } catch (error){
+console.error("Error al cargar el JSON")
+  }
+  CargarJSON();
+}
+
+function datos(jsonObj){
+  
+ juegos.array.forEach((juego) => {
 
         const section = document.createElement("section");
 
@@ -24,21 +34,23 @@ async function CargarJSON() {
         h3_3.append(textoh3_3);
 
         const div1 = document.createElement("div");
-        div1.id = "#platform";
+        div1.setAttribute("id", "plataforma")
 
-        const span_1 = document.createElement("span");
-        const span_2 = document.createElement("span");
-        const span_3 = document.createElement("span");
+        for (const plataforma of juego.plataforma){
+           const span = document.createElement("span");
+            const textospan = document.createTextNode(juego.plataforma);
+            span.append(textospan);
 
-        const textospan_1 = document.createTextNode(juego.plataforma);
-        const textospan_2 = document.createTextNode(juego.plataforma);
-        const textospan_3 = document.createTextNode(juego.plataforma);
+            div1.append(span);
+        }
 
-        span_1.append(textospan_1);
-        span_2.append(textospan_2);
-        span_3.append(textospan_3);
+        section.append(div1);
+
+        
 
         const article = document.createElement("article");
+
+
 
         const div2_1 = document.createElement("div");
         const div2_2 = document.createElement("div");
@@ -55,9 +67,6 @@ async function CargarJSON() {
         section.append(h3_1, h3_2, h3_3,div1,article);
         
     });
-  } catch (error) {
-    
-  }
 }
 
 /*
@@ -84,4 +93,5 @@ section{
         div{historia}
     }
   }
-}*/
+}
+*/
