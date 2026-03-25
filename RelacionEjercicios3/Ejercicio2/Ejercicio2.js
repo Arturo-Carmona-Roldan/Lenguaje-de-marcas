@@ -8,7 +8,9 @@ async function cargarJSON() {
     const mensajes = await response.json();
 
     mensajes.forEach((mensaje) => {
-      const tarjeta = document.createElement("div");
+      console.log(mensaje);
+
+      const sec = document.createElement("section");
 
       const cabecera = document.createElement("div");
 
@@ -36,12 +38,13 @@ async function cargarJSON() {
 
       cuerpo.append(h4_titulo, h4_contenido);
 
-      tarjeta.append(cabecera, cuerpo);
+      sec.append(cabecera, cuerpo);
 
-      principal.append(tarjeta);
+      principal.append(sec);
     });
   } catch (error) {
     console.log("Error al cargar el JSON", error);
   }
 }
+
 cargarJSON();
