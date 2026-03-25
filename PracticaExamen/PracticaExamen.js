@@ -55,7 +55,9 @@ async function CargarJSON() {
         section.append(h3_1, h3_2, h3_3,div1,article);
         
     });
-  } catch (error) {}
+  } catch (error) {
+    
+  }
 }
 
 /*
