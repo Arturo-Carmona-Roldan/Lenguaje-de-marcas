@@ -1,4 +1,5 @@
 const principal = document.querySelector("#principal");
+
 const requestURL = "../Ejercicio2/Ejercicio2.json";
 
 async function cargarJSON() {
@@ -43,5 +44,4 @@ async function cargarJSON() {
     console.log("Error al cargar el JSON", error);
   }
 }
-
 cargarJSON();

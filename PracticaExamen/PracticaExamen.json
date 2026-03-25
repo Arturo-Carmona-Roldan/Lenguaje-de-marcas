@@ -1,0 +1,50 @@
+[
+    {
+        "Titulo":"The legend of zelda Wind Waker",
+        "Estudio":"Nintendo",
+        "Año":"2002",
+        "Plataforma":[
+            "Nintendo Wii",
+            "Nintendo GameCube",
+            "PC"
+        ],
+        "Valoraciones":[
+            {
+                "nombre":"Juanma el Gamer",
+                "jugabilidad":"8",
+                "diseño":"9",
+                "historia":"9"
+            },
+            {
+                "nombre":"Cristian el Gamer",
+                "jugabilidad":"7",
+                "diseño":"9",
+                "historia":"8"
+            }
+        ]
+    },
+    {
+        "Titulo":"Minecraft",
+        "Estudio":"Mojang",
+        "Año":"2011",
+        "plataforma":[
+            "Pc",
+            "PlayStation",
+            "PC"
+        ],
+        "Valoraciones":[
+            {
+                "nombre":"Santi el Gamer",
+                "jugabilidad":"7",
+                "diseño":"5",
+                "historia":"2"
+            },
+            {
+                "nombre":"Alexis el Gamer",
+                "jugabilidad":"7",
+                "diseño":"8",
+                "historia":"3"
+            }
+        ]
+    }
+]
