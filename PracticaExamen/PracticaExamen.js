@@ -1,4 +1,5 @@
 const principal = document.querySelector("#principal");
+// para elegir por clase en vez de por id se usa .clase por ejemplo .principal
 
 //ruta del archivo
 const URL = "PracticaExamen.json";
@@ -17,9 +18,9 @@ async function CargarJSON() {
 
 CargarJSON();
 
-function datos(jsonObj) {
+function datos(juegos2) {
 
-  jsonObj.forEach((juego) => {
+  juegos2.forEach((juego) => {
     //datos principales
     const section = document.createElement("section");
 
