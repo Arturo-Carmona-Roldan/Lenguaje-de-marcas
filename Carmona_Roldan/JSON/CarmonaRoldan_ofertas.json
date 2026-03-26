@@ -1,0 +1,29 @@
+{
+    "nombre_agencia":"Agencia Arturo",
+    "informacion_contacto":{
+        "telefono":"622 85 10 32",
+        "mail":"agenciaarturo@gmail.com"
+    },
+    "excursiones":[
+        {
+            "destino":"Paris",
+            "pais":"Francia",
+            "precio":"700 euros",
+            "actividades":[
+                "Visitar la torre eifel",
+                "Visita al museo",
+                "Merienda tipica francesa"
+            ]
+        },
+        {
+            "destino":"Madrid",
+            "pais":"España",
+            "precio":"350 euros",
+            "actividades":[
+                "Visita al museo",
+                "Visita al palacio real ",
+                "Comida tipica local"
+            ]
+        }
+    ]
+}
