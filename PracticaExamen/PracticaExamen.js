@@ -1,72 +1,91 @@
 const principal = document.querySelector("#principal");
 
+//ruta del archivo
 const URL = "PracticaExamen.json";
 
+//cargar el json
 async function CargarJSON() {
   try {
     const response = await fetch(URL);
     const juegos = await response.json();
 
     datos(juegos);
-   
-  } catch (error){
-console.error("Error al cargar el JSON")
+  } catch (error) {
+    console.error("Error al cargar el JSON");
   }
-  CargarJSON();
 }
 
-function datos(jsonObj){
-  
- juegos.array.forEach((juego) => {
+CargarJSON();
 
-        const section = document.createElement("section");
+function datos(jsonObj) {
 
-        const h3_1 = document.createElement("h3");
-        const h3_2 = document.createElement("h3");
-        const h3_3 = document.createElement("h3");
+  jsonObj.forEach((juego) => {
+    //datos principales
+    const section = document.createElement("section");
 
-        const textoh3_1 = document.createTextNode(juego.Titulo);
-        const textoh3_2 = document.createTextNode(juego.Estudio);
-        const textoh3_3 = document.createTextNode(juego.Año);
+    const h3_1 = document.createElement("h3");
+    const h3_2 = document.createElement("h3");
+    const h3_3 = document.createElement("h3");
 
-        h3_1.append(textoh3_1);
-        h3_2.append(textoh3_2);
-        h3_3.append(textoh3_3);
+    const textoh3_1 = document.createTextNode(juego.titulo);
+    const textoh3_2 = document.createTextNode(juego.estudio);
+    const textoh3_3 = document.createTextNode(juego.anio);
 
-        const div1 = document.createElement("div");
-        div1.setAttribute("id", "plataforma")
+    h3_1.append(textoh3_1);
+    h3_2.append(textoh3_2);
+    h3_3.append(textoh3_3);
 
-        for (const plataforma of juego.plataforma){
-           const span = document.createElement("span");
-            const textospan = document.createTextNode(juego.plataforma);
-            span.append(textospan);
+    section.append(h3_1, h3_2, h3_3);
 
-            div1.append(span);
-        }
+    //plataformas
+    const div_plataformas = document.createElement("div");
+    div_plataformas.setAttribute("id", "plataformas");
 
-        section.append(div1);
+    for (const plataforma of juego.plataforma) {
+      const span_plataforma = document.createElement("span");
+      const texto_span = document.createTextNode(plataforma);
+      span_plataforma.append(texto_span);
 
-        
+      div_plataformas.append(span_plataforma);
+    }
 
-        const article = document.createElement("article");
+    section.append(div_plataformas);
 
+    //valoraciones
+    const article_valoraciones = document.createElement("article");
 
+    for(const valoracion of juego.valoraciones){
 
-        const div2_1 = document.createElement("div");
-        const div2_2 = document.createElement("div");
+      const div_valoraciones = document.createElement("div");
 
-        const div3_1 = document.createElement("div");
-        const div3_2 = document.createElement("div");
-        const div3_3 = document.createElement("div");
-        const div3_4 = document.createElement("div");
+      const div_nombre = document.createElement("div");
+      const div_jugabilidad = document.createElement("div");
+      const div_disenio = document.createElement("div");
+      const div_historia = document.createElement("div");
 
-        div2_1.append();
+      console.log(valoracion);
 
-        article.append(div2_1,div2_2);
+      const nombre = document.createTextNode("Nombre: " + valoracion.nombre);
+      const jugabilidad = document.createTextNode("Jugabilidad: " + valoracion.jugabilidad);
+      const disenio = document.createTextNode("Diseño: " + valoracion.disenio);
+      const historia = document.createTextNode("Historia: " + valoracion.historia);
 
-        section.append(h3_1, h3_2, h3_3,div1,article);
-        
-    });
+      div_nombre.append(nombre);
+      div_jugabilidad.append(jugabilidad);
+      div_disenio.append(disenio);
+      div_historia.append(historia);
+
+      div_valoraciones.append(div_nombre);
+      div_valoraciones.append(div_jugabilidad);
+      div_valoraciones.append(div_disenio);
+      div_valoraciones.append(div_historia);
+
+      article_valoraciones.append(div_valoraciones);
+    }
+
+    section.append(article_valoraciones);
+    principal.append(section);
+  });
 }
 
 /*
