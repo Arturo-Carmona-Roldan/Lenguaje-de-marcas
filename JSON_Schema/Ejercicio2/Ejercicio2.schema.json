@@ -1,0 +1,38 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title":"Ejercicio 1 JSON",
+    "description":"Este es el ejercicio 1 de JSON schemas",
+    "type":"object",
+    "properties": {
+        "contenido":{
+            "type":"string"
+        },
+        "tipoSiglas":{
+            "type":"array",
+            "items": {
+                "type":"string"
+            }
+        },
+        "tipoNumerico":{
+            "type":"array",
+            "items": {
+                "type":"number",
+                "maximum": 31,
+                "minimum": 1
+            },
+            "minItems": 7,
+            "maxItems": 12
+        },
+        "tipoCadena":{
+            "type":"array",
+            "items": {
+                "type":"string"
+            }
+        }
+    },
+    "required": ["contenido","tipoSiglas","tipoNumerico","tipoCadena"],
+    "additionalProperties": false,
+    "patternProperties": {
+        "^\\$":{}
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "$schema": "../Ejercicio2/Ejercicio2.schema.json",
+    "contenido":"tiposDiasSemanas",
+    "tipoSiglas":["L","M","X","J","V","S","D"],
+    "tipoNumerico":[1,2,3,4,5,6,7],
+    "tipoCadena":["lunes","martes","miercoles","jueves","viernes","sabado","domingo"]
+}

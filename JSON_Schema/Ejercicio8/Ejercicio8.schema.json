@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ejercicio8",
+  "description": "Ejercicio sobre una biblioteca",
+  "type": "object",
+  "properties": {
+    "libros": {
+      "description": "aqui estaran todos los libros",
+      "minItems": 1000,
+      "maxItems": 1,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "isbn": {
+            "description": "es el codigo del libro",
+            "type": "string",
+            "pattern": "^([0-9]{3}-){4}[0-9]{1}$"
+          },
+          "tipoLibro": {
+            "description": "el tipo del libro",
+            "type": "string",
+            "enum": ["novela", "ensayo", "biografía"]
+          },
+          "categoria": {
+            "description": "la categoria del libro",
+            "type": "string",
+            "enum": ["prestamo", "consulta"]
+          },
+          "titulo": {
+            "description": "es el titulo del libro",
+            "type": "string"
+          },
+          "autores": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "nombre": {
+                  "type": "string"
+                },
+                "apellidos": {
+                  "type": "string"
+                },
+                "nacionalidad": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false,
+              "required": ["nombre", "apellido"]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["titulo", "categoria", "autores"]
+      }
+    }
+  },
+  "additionalProperties": false,
+  "patternProperties": {
+    "^\\$": {}
+  }
+}

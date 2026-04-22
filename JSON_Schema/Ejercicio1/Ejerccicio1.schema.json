@@ -1,0 +1,35 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title":"Ejercicio 1 JSON",
+    "description":"Este es el ejercicio 1 de JSON schemas",
+    "type":"object",
+    "properties": {
+        "marca":{
+            "type":"string"
+        },
+        "modelo":{
+            "type":"string"
+        },
+        "diesel":{
+            "type":"boolean"
+        },
+        "gasolina":{
+            "type":"boolean"
+        },
+        "hibrido":{
+            "type":"boolean"
+        },
+        "puntuacionesCliente":{
+            "type":"array",
+            "items": {
+                "type":"number"
+            },
+            "minItems":1
+        }
+    },
+    "required": ["marca", "modelo", "puntuacionesCliente"],
+    "additionalProperties": false,
+    "patternProperties": {
+        "^\\$":{}
+    }
+}
