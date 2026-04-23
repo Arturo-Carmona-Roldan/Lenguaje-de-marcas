@@ -1,0 +1,58 @@
+{
+    "$schema": "EjercicioPractica.schema.json",
+    "torneo": {
+        "fecha": "2026-4-23",
+        "ubicacion": {
+            "ciudad": "Malaga",
+            "pais": "España"
+        },
+        "partidos": [
+            {
+                "idPartido": "M-abc-123",
+                "categoria": "individual masculino",
+                "ronda":"octavos",
+                "jugadores":[
+                    {
+                        "nombre":"Arturo",
+                        "apellido":"Carmona",
+                        "nacionalidad":"Española",
+                        "rankingATP/WTA":12,
+                        "tipo":"Cabeza de serie"
+                    },
+                    {
+                        "nombre":"Juanma",
+                        "apellido":"Toro",
+                        "nacionalidad":"Española",
+                        "rankingATP/WTA":10
+
+                    }
+                ],
+                "resultadoFinal":{
+                    "sets_jugador1":2,
+                    "sets_jugador2":3
+                }
+            },
+            {
+                "idPartido": "W-dfg-222",
+                "categoria": "individual femenino",
+                "ronda":"semifinal",
+                "jugadores":[
+                    {
+                        "nombre":"Marta",
+                        "apellido":"Alvarado",
+                        "nacionalidad":"Española",
+                        "rankingATP/WTA":7,
+                        "tipo":"Wildcard"
+                    },
+                    {
+                        "nombre":"Inma",
+                        "apellido":"Roldán",
+                        "nacionalidad":"Española",
+                        "rankingATP/WTA":1
+
+                    }
+                ]
+            }
+        ]
+    }
+}

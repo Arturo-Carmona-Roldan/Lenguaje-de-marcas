@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EjercicioPractica",
+  "description": "Ejercicio sobre el torneo de tenis",
+  "type": "object",
+  "properties": {
+    "torneo":{
+        "type":"object",
+        "properties": {
+            "fecha":{
+                "type":"string"
+            },
+            "ubicacion":{
+                "type":"object",
+                "properties": {
+                    "ciudad":{
+                        "type":"string"
+                    },
+                    "pais":{
+                        "type":"string"
+                    }
+                },
+                "required": ["ciudad","pais"],
+                "additionalProperties": false
+            },
+            "partidos":{
+                "type":"array",
+                "minItems": 1,
+                "maxItems": 128,
+                "items": {
+                    "type":"object",
+                    "properties": {
+                        "idPartido":{
+                            "type":"string",
+                            "pattern": "^[WM]{1}-[a-z]{3}-[0-9]{3}$"
+                        },
+                        "categoria":{
+                            "type":"string",
+                            "enum": ["individual masculino","individual femenino","dobles"]
+                        },
+                        "ronda":{
+                            "type":"string",
+                            "enum": ["primera ronda","octavos","cuartos","semifinal","final"]
+                        },
+                        "jugadores":{
+                            "type":"array",
+                            "minItems": 2,
+                            "maxItems": 4,
+                            "items": {
+                                "type":"object",
+                                "properties": {
+                                    "nombre":{
+                                        "type":"string"
+                                    },
+                                    "apellido":{
+                                        "type":"string"
+                                    },
+                                    "nacionalidad":{
+                                        "type":"string"
+                                    },
+                                    "rankingATP/WTA":{
+                                        "type":"integer"
+                                    },
+                                    "tipo":{
+                                        "type":"string",
+                                        "enum":["Cabeza de serie","Wildcard"]
+                                    }
+                                },
+                                "required": ["nombre","apellido","nacionalidad","rankingATP/WTA"],
+                                "additionalProperties": false
+                            }
+                        },
+                        "resultadoFinal":{
+                            "type":"object",
+                            "properties": {
+                                "sets_jugador1":{
+                                    "type":"integer",
+                                    "minimum": 0
+                                },
+                                "sets_jugador2":{
+                                    "type":"integer",
+                                    "minimum": 0
+                                },
+                                "sets_equipo1":{
+                                    "type":"integer",
+                                    "minimum": 0
+                                },
+                                "sets_equipo2":{
+                                    "type":"integer",
+                                    "minimum": 0
+                                }
+                            },
+                            "additionalProperties": false
+                        }
+                    },
+                    "required": ["idPartido","categoria","ronda","jugadores"],
+                    "additionalProperties": false
+                }
+            }
+        },
+        "required": ["fecha","ubicacion","partidos"],
+        "additionalProperties": false
+    }
+  },
+  "required": ["torneo"],
+  "additionalProperties": false,
+  "patternProperties": {
+    "^\\$": {}
+  }
+}
