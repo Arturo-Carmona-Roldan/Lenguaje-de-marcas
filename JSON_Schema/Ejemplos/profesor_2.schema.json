@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ejemplo JSON Schema DAM",
+  "description": "Este es el primer ejemplo que es para un objeto profesor",
+  "type": "object",
+  "properties": {
+    "datosPersonales": {
+      "description": "Son los datos pesronales del profesor",
+      "type": "object",
+      "properties": {
+        "nombre": {
+          "description": "Nombre del profe",
+          "type": "string"
+        },
+        "edad": {
+          "description": "La edad real o no del profe",
+          "type": "integer",
+          "minimum": 15,
+          "maximum": 75
+        }
+      },
+      "additionalProperties":false         
+    },
+    "datosAcademicos": {
+      "description": "Los datos relacionados con las clases",
+      "type": "object",
+      "properties": {
+        "departamento": {
+          "description": "Departamento al que pertenece",
+          "type": "string"
+        },
+        "asignaturas": {
+          "description": "Lista de asignaturas que imparte",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties":{
+              "asignatura":{
+                "type":"string"
+              },
+              "curso":{
+                "type":"string"
+              }
+            },
+            "additionalProperties": false
+          },
+          "minItems": 2,
+          "maxItems": 4
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false,
+  "patternProperties": {
+    "^\\$": {}
+  }
+}

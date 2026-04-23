@@ -1,0 +1,22 @@
+{
+  "$schema":"profesor_2.schema.json",
+  "datosPersonales": {
+    "nombre": "Juanan",
+    "edad": 27
+  },
+  "datosAcademicos": {
+    "departamento": "Informática",
+    "asignaturas": [
+      { "asignatura": "LMS", 
+        "curso": "1DAM 1DAW 1 ASIR" },
+      {
+        "asignatura": "AWS",
+        "curso": "2SMR"
+      },
+      {
+        "asignatura": "SOST",
+        "curso": "1DAM 1DAW 1ASIR 1SMR"
+      }
+    ]
+  }
+}

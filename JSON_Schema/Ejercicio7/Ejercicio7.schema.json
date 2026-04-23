@@ -1,33 +1,68 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "title":"Ejercicio 7 JSON",
-    "description":"Este es el ejercicio 7 de JSON schemas",
-    "type":"object",
+    "title": "Ejercicio 7",
+    "description": "Este es el ejercicio 7 de la relación 4",
+    "type": "object",
     "properties": {
-        "patrones":{
-            "type":"object",
+        "patrones": {
+            "type": "object",
             "properties": {
-                "numeroBinario":{
-                    "type":"string",
-                    "pattern":"^[01]{1}$"
+                "numeroBinario": {
+                    "type": "string",
+                    "pattern": "^[01]{1}$"
                 },
-                "numeroOctal":{
-                    "type":"string",
-                    "pattern":"^[0-8]{1}$"
+                "numeroOctal": {
+                    "type": "string",
+                    "pattern": "^[0-7]{1}$"
                 },
-                "numeroHexadecimal":{
-                    "type":"string",
-                    "pattern":"^[0-9A-Z]{1}$"
+                "numeroHexadecimal": {
+                    "type": "string",
+                    "pattern": "^([0-9]|[A-F]|[a-f]){1}$"
                 },
-                "codigoBarras":{
-                    "type":"string",
-                    "pattern":"^[0-9]{1}(-[0-9]{6}){2}$"
+                "sistemaOperativo": {
+                    "type": "string",
+                    "enum": [
+                        "Linux",
+                        "Windows",
+                        "MacOS"
+                    ]
+                },
+                "codigoDebarras": {
+                    "type": "string",
+                    "pattern": "^[0-9]{1}(-[0-9]{6}){2}$"
+                },
+                "direccionMemoria": {
+                    "type": "string",
+                    "pattern": "^0x[0-9A-Fa-f]{8}$"
+                },
+                "direccionMAC": {
+                    "type": "string",
+                    "pattern": "^([0-9A-Fa-f]{2}:){5}[0-9A-Fa-f]{2}$"
+                },
+                "ipv6": {
+                    "type": "object",
+                    "properties": {
+                        "prefijo": {
+                            "type": "string",
+                            "pattern": "^([0-9A-Fa-f]{0,4}:){2}[0-9A-Fa-f]{0,4}$"
+                        },
+                        "id_subred": {
+                            "type": "string",
+                            "pattern": "^[0-9A-Fa-f]{0,4}$"
+                        },
+                        "id_interfaz": {
+                            "type": "string",
+                            "pattern": "^([0-9A-Fa-f]{0,4}:){2}[0-9A-Fa-f]{0,4}$"
+                        }
+                    },
+                    "additionalProperties": false
                 }
-            }
+            },
+            "additionalProperties": false
         }
     },
     "additionalProperties": false,
     "patternProperties": {
-        "^\\$":{}
+        "^\\$": {}
     }
 }

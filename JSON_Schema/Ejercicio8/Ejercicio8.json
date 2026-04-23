@@ -1,0 +1,60 @@
+{
+  "$schema": "Ejercicio8.schema.json",
+  "libros": [
+    {
+      "isbn": "333-452-231-123-0",
+      "tipoLibro": "novela",
+      "categoria": "prestamo",
+      "titulo": "La sombra del viento",
+      "autores": [
+        {
+          "nombre": "Carlos",
+          "apellidos": "Ruiz Zafón",
+          "nacionalidad": "española"
+        }
+      ],
+      "editor": {
+        "nombre": "María",
+        "apellidos": "García López",
+        "nacionalidad": "española"
+      },
+      "numeroPaginas": 576,
+      "anioPublicacion": "2001"
+    },
+    {
+      "isbn": "123-456-789-321-5",
+      "tipoLibro": "ensayo",
+      "categoria": "consulta",
+      "titulo": "Breve historia del tiempo",
+      "autores": [
+        {
+          "nombre": "Stephen",
+          "apellidos": "Hawking Hawking",
+          "nacionalidad": "británica"
+        }
+      ],
+      "numeroPaginas": 256,
+      "anioPublicacion": "1988"
+    },
+    {
+      "isbn": "999-888-777-666-4",
+      "tipoLibro": "biografía",
+      "categoria": "prestamo",
+      "titulo": "Vida de un genio",
+      "autores": [
+        {
+          "nombre": "Stephen",
+          "apellidos": "Hawking Hawking",
+          "nacionalidad": "británica"
+        }
+      ],
+      "editor": {
+        "nombre": "Juan",
+        "apellidos": "Pérez Martín",
+        "nacionalidad": "mexicana"
+      },
+      "numeroPaginas": 300,
+      "anioPublicacion": "2015"
+    }
+  ]
+}

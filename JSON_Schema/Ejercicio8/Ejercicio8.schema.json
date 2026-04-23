@@ -6,8 +6,8 @@
   "properties": {
     "libros": {
       "description": "aqui estaran todos los libros",
-      "minItems": 1000,
-      "maxItems": 1,
+      "minItems": 1,
+      "maxItems": 1000,
       "type": "array",
       "items": {
         "type": "object",
@@ -20,12 +20,19 @@
           "tipoLibro": {
             "description": "el tipo del libro",
             "type": "string",
-            "enum": ["novela", "ensayo", "biografía"]
+            "enum": [
+              "novela",
+              "ensayo",
+              "biografía"
+            ]
           },
           "categoria": {
             "description": "la categoria del libro",
             "type": "string",
-            "enum": ["prestamo", "consulta"]
+            "enum": [
+              "prestamo",
+              "consulta"
+            ]
           },
           "titulo": {
             "description": "es el titulo del libro",
@@ -47,12 +54,41 @@
                 }
               },
               "additionalProperties": false,
-              "required": ["nombre", "apellido"]
+              "required": [
+                "nombre",
+                "apellidos"
+              ]
             }
+          },
+          "editor":{
+            "type":"object",
+            "properties": {
+              "nombre":{
+                "type":"string"
+              },
+              "apellidos":{
+                "type":"string"
+              },
+              "nacionalidad":{
+                "type":"string"
+              }
+            },
+            "additionalProperties": false
+          },
+          "numeroPaginas":{
+            "type":"integer"
+          },
+          "anioPublicacion":{
+            "type":"string",
+            "pattern": "^[0-9]{4}$"
           }
         },
         "additionalProperties": false,
-        "required": ["titulo", "categoria", "autores"]
+        "required": [
+          "titulo",
+          "categoria",
+          "autores"
+        ]
       }
     }
   },

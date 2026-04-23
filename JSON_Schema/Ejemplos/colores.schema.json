@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ejemplo de colores",
+  "description": "mi primer ejemplo de colorines",
+  "type": "object",
+  "properties": {
+    "nombre": {
+      "description": "el nombre del color",
+      "type": "string",
+      "enum": ["rojo", "verde", "azul", "naranja"]
+    },
+    "subcolor": {
+      "description": "color más concreto",
+      "type": "string",
+      "minLength": 6,
+      "maxLength": 25
+    },
+    "numero_arcoiris": {
+      "description": "el número que ocupa en el arcoiris",
+      "type": "integer"
+    },
+    "colores_RGB": {
+      "description": "Los valores que tendría para Rojo Green Blue",
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 255
+      }
+    },
+    "colorHEX": {
+      "type": "string",
+      "pattern": "^#([0-9]|[A-F]){1,6}$"
+    }
+  },
+  "required": ["nombre", "numero_arcoiris", "colores_RGB"],
+  "additionalProperties": false,
+  "patternProperties": {
+    "^\\$": {}
+  }
+}

@@ -1,0 +1,8 @@
+{
+    "$schema":"colores.schema.json",
+    "nombre":"rojo",
+    "subcolor":"escarlata",
+    "numero_arcoiris":2,
+    "colores_RGB":[255,0,0],
+    "colorHEX":"#1"
+}

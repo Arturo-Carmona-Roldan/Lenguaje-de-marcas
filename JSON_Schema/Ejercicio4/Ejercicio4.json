@@ -1,0 +1,34 @@
+{
+    "$schema":"Ejercicio4.schema.json",
+    "informacionGeneral":{
+        "idPedido":"asas",
+        "fecha":"2026-04-16T17:00:00Z",
+        "cliente":{
+            "idCliente":"CL1",
+            "nombre":"Arturo",
+            "email":"arturo@gmail.com",
+            "direccion":{
+                "calle":"Verdial",
+                "ciudad":"Ricon de la Victoria",
+                "codigoPostal":"29730",
+                "pais":"España"
+            }            
+        },
+        "productos":[
+                {
+                    "idProducto":"D001",
+                    "nombre":"queso",
+                    "cantidad":1,
+                    "precio":5.5
+                },
+                {
+                    "idProducto":"D002",
+                    "nombre":"botellas de agua",
+                    "cantidad":2,
+                    "precio":2
+                }
+            ],
+            "estadoPedido":["enviado","en reparto"],
+            "totalPedido":7.50
+    }
+}

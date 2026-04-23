@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ejercicio 5",
+  "description": "Este es el ejercicio 4 de la relación 2",
+  "type": "object",
+  "properties": {
+    "persona": {
+      "type": "object",
+      "properties": {
+        "nacimiento": {
+          "type": "string",
+          "format": "date"
+        },
+        "datos": {
+          "type": "object",
+          "properties": {
+            "nombre": {
+              "type": "object",
+              "properties": {
+                "tratamiento": {
+                  "type": "string",
+                  "enum": ["Sr", "Dr", "Dra", "Sra"]
+                },
+                "valor": {
+                  "type": "string"
+                }
+              },"additionalProperties": false
+            },
+            "apellidos": {
+              "type": "object",
+              "properties": {
+                "numeroApellidos": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 3
+                },
+                "valor": {
+                  "type": "string"
+                }
+              },"additionalProperties":false
+            },
+            "dni": {
+              "type": "object",
+              "properties": {
+                "letra": {
+                  "type": "string",
+                  "pattern": "^[A-Z]|[a-Z]$"
+                },
+                "valor": {
+                  "type": "string",
+                  "pattern": "^\\d{8}$"
+                }
+              },"additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "comentario": {
+          "type": "string"
+        }
+      }
+    },
+    "additionalProperties": false,
+    "patternProperties": {
+      "^\\$": {}
+    }
+  }
+}

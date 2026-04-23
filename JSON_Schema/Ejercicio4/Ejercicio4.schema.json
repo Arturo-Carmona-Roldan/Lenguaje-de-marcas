@@ -1,0 +1,97 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Ejercicio 4",
+    "description": "este es el ejercicio 4",
+    "type": "object",
+    "properties": {
+        "informacionGeneral": {
+            "type": "object",
+            "properties": {
+                "idPedido": {
+                    "type":"string",
+                    "minLength": 1,
+                    "maxLength": 7
+                },
+                "fecha": {
+                    "type":"string",
+                    "format": "date-time"
+                },
+                "cliente": {
+                    "type":"object",
+                    "properties": {
+                        "idCliente":{
+                            "type":"string"
+                        },
+                        "nombre":{
+                            "type":"string"
+                        },
+                        "email":{
+                            "type":"string",
+                            "format": "email"
+                        },
+                        "direccion":{
+                            "type":"object",
+                            "properties": {
+                                "calle":{
+                                    "type":"string"
+                                },
+                                "ciudad":{
+                                    "type":"string"
+                                },
+                                "codigoPostal":{
+                                    "type":"string"
+                                },
+                                "pais":{
+                                    "type":"string"
+                                }
+                            },
+                            "additionalProperties": false
+                        }
+                    },
+                    "required": ["idCliente","nombre","email","direccion"],
+                    "additionalProperties": false
+                },
+                "productos":{
+                    "type":"array",
+                    "items": {
+                        "type":"object",
+                        "properties": {
+                            "idProducto":{
+                                "type":"string"
+                            },
+                            "nombre":{
+                                "type":"string"
+                            },
+                            "cantidad":{
+                                "type":"integer",
+                                "minimum": 1
+                            },
+                            "precio":{
+                                "type":"number",
+                                "minimum": 0
+                            }
+                        },
+                        "required": ["idProducto","nombre","cantidad","precio"],
+                        "additionalProperties": false
+                    },
+                    "minItems": 1
+                },
+                "estadoPedido":{
+                    "type":"array",
+                    "items": {
+                        "type":"string"
+                    }
+                },
+                "totalPedido":{
+                    "type":"number"
+                }
+            },
+            "required": ["fecha","cliente","productos","estadoPedido","totalPedido"],
+            "additionalProperties": false
+        }
+    },
+    "additionalProperties": false,
+    "patternProperties": {
+        "^\\$": {}
+    }
+}

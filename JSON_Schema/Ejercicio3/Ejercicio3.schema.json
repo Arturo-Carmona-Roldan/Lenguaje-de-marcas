@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ejercicio 3",
+  "description": "este es el ejercicio 3",
+  "type":"object",
+  "properties": {
+    "mueble":{
+        "type":"string"
+    },
+    "tipoMadera":{
+        "type":"string"
+    },
+    "medidas":{
+        "type":"object",
+        "properties": {
+            "ancho":{
+                "type":"object",
+                "properties": {
+                    "numero":{
+                        "type":"integer",
+                        "minimum": 1
+                    },
+                    "medida":{
+                        "type":"string",
+                        "enum": ["mm","cm","m"]
+                    }
+                },
+                "required": ["numero","medida"]
+            },
+            "alto":{
+                "type":"object",
+                "properties": {
+                    "numero":{
+                        "type":"integer",
+                        "minimum": 1
+                    },
+                    "medida":{
+                        "type":"string",
+                        "enum": ["mm","cm","m"]
+                    }
+                },
+                "required": ["numero","medida"]
+            },
+            "profundidad":{
+                "type":"object",
+                "properties": {
+                    "numero":{
+                        "type":"integer",
+                        "minimum": 1
+                    },
+                    "medida":{
+                        "type":"string",
+                        "enum": ["mm","cm","m"]
+                    }
+                },
+                "required": ["numero","medida"]
+            }
+        },
+        "required": ["ancho","alto","profundidad"],
+        "additionalProperties": false
+    }
+  },
+  "additionalProperties": false,
+  "patternProperties": {
+    "^\\$": {}
+  }
+}
