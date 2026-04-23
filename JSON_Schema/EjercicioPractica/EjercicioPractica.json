@@ -1,4 +1,4 @@
-{
+{ 
     "$schema": "EjercicioPractica.schema.json",
     "torneo": {
         "fecha": "2026-04-23",

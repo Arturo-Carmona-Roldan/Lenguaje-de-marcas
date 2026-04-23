@@ -1,0 +1,52 @@
+{
+    "$schema":"Examen.schema.json",
+    "nombreRestaurante":"Casa Pepe",
+    "direccion":{
+        "calle":"Verdial",
+        "ciudad":"Malaga",
+        "codigoPostal":"29730"
+    },
+    "comandas":[
+        {
+            "idComanda":"AC-123#",
+            "numeroMesa":1,
+            "nombreCamarero":"Manuel",
+            "estadoComanda":"pendiente",
+            "platos":[
+                {
+                    "nombrePlato":"Ensalada",
+                    "precio":6.50,
+                    "cantidad":1,
+                    "extras":["queso","jamon"]
+                }
+            ],
+            "pago":{
+                "metodo":"efectivo",
+                "importeTotal":6.50
+            }
+        },
+        {
+            "idComanda":"BC-223#",
+            "numeroMesa":12,
+            "nombreCamarero":"Juan",
+            "estadoComanda":"en preparación",
+            "platos":[
+                {
+                    "nombrePlato":"Croquetas",
+                    "precio":5,
+                    "cantidad":2,
+                    "extras": ["salsa"]
+                },
+                {
+                    "nombrePlato":"Tabla de queso",
+                    "precio":5.50,
+                    "cantidad":3
+                }
+            ],
+            "pago":{
+                "metodo":"efectivo",
+                "importeTotal":6.50
+            }
+        }
+    ]
+}
