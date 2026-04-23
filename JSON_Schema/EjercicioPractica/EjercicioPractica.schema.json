@@ -8,7 +8,8 @@
         "type":"object",
         "properties": {
             "fecha":{
-                "type":"string"
+                "type":"string",
+                "format": "date"
             },
             "ubicacion":{
                 "type":"object",

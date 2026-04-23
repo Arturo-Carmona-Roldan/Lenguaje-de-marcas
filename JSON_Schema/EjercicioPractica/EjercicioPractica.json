@@ -1,7 +1,7 @@
 {
     "$schema": "EjercicioPractica.schema.json",
     "torneo": {
-        "fecha": "2026-4-23",
+        "fecha": "2026-04-23",
         "ubicacion": {
             "ciudad": "Malaga",
             "pais": "España"
